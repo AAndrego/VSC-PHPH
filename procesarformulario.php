@@ -4,7 +4,7 @@
 class automovil{
     public $mar;//Atributo marca
     public $line;//Atributo
-    public $mod;//
+    public $mod;//Atributo
 };
 
 class calculador_impuestos{
