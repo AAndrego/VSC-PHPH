@@ -6,7 +6,7 @@ class automovil{
     public $line;//Atributo
     public $mod;//Atributo
 };
-//anderson es una perra
+
 class calculador_impuestos{
     var $resultado;
     var $porc;
