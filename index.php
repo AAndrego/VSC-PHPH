@@ -49,17 +49,30 @@
 		<input type="checkbox" id="op3" name="descuento[]" value="c"> Servicio publico
         </label>
         </p>
+        <?php
+     $r1=$_GET['Rang1'];
+     $r2=$_GET['Rang2'];
+     $r3=$_GET['Rang3'];
 
+    ?>
+    <input type="hidden" name="ran1" value="<?php echo "$r1" ?>"/>
+    <input type="hidden" name="ran2" value="<?php echo "$r2" ?>"/>
+    <input type="hidden" name="ran3" value="<?php echo "$r3" ?>"/>
+    
         <input type = "submit" value="Enviar">
+      
 
         </form>
-
+        <form name="rangos"  method="get" action="rangos.php">
+        <input type = "submit" value="editar">
+        </form>
     </section>
 
 	<footer>
 	
 	</footer>
 	
+    
 	</body>
 	
 	</html>
