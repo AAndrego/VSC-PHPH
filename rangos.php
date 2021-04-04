@@ -8,7 +8,7 @@
 
 <title>Cambiar Rangos</title>
 
-</head><!--Jeison es una perra-->
+</head>
 
 <body>
 
@@ -18,24 +18,19 @@
 		
         <p><label>Limite rango 1:</label>
 		
-        <input type="text" name="Rang1"></p>
+        <input type="text" name="Rang1"><label>   Porcentaje 1: </label><input type="text" name="Por1"></p>
         
         <p><label>Limite rango 2:</label>
 		
-        <input type="text" name="Rang2"></p>
+        <input type="text" name="Rang2"><label>   Porcentaje 2: </label><input type="text" name="Por2"></p>
 		
         <p><label>Limite rango 3:</label>
 		
-        <input type="text" name="Rang3"></p>
+        <input type="text" name="Rang3"><label>   Porcentaje 3: </label><input type="text" name="Por3"></p>
 
-        <?php
-     $x=7;
-     $z=8;
-     
+        <p> Porcentaje 4: </label><input type="text" name="Por4"></p>
 
-    ?>
-
-        <input type = "submit" value="Guardar">
+        <input type = "submit" value="Guardar">  
         
 
         </form>
