@@ -1,6 +1,6 @@
 <?php
 
-
+require 'conexion.php';
 class automovil{
     public $mar;//Atributo marca
     public $line;//Atributo linea
@@ -20,6 +20,9 @@ class calculador_impuestos{
     var $porcentaje2;
     var $porcentaje3;
     var $porcentaje4;
+    var $d1;
+    var $d2;
+    var $d3;
 
 
     //Este metodo es para calcular el impuesto neto
@@ -42,58 +45,92 @@ class calculador_impuestos{
     
     //Este metodo es para calcular el descuento y el valor a pagar del impuesto
     function aplicar_descuento(){
-        $this->porc = 0;
-        foreach($this->descuento as $desc){
-            if ($desc == 'a'){
+        
+          if ($this->d1 == '0.1'){
+                $this->porc = 0;
                 $this->porc = $this->porc + ($this->resultado * 0.1);
             }
-            else if($desc == 'b'){
+            else if($this->$d2 == '50000'){
+                $this->porc = 0;
                 $this->porc = $this->porc + 50000;
             }
-            else if($desc == 'c'){
+            else if($this->$d3 == '0.05'){
+                $this->porc = 0;
                 $this->porc = + $this->porc + ($this->resultado * 0.05);
             }
-        }
         
         $this->total = $this->resultado - $this->porc;
 
         echo "El valor a pagar es: " . $this->total . "<br>";
     }
 
-    function rango(){
-        $this->rango1 =$_GET['ran1'];
-        $this->rango2 =$_GET['ran2'];
-        $this->rango3 =$_GET['ran3'];
-        $this->porcentaje1 =$_GET['po1'];
-        $this->porcentaje2 =$_GET['po2'];
-        $this->porcentaje3 =$_GET['po3'];
-        $this->porcentaje4 =$_GET['po4'];
-        if($this->porcentaje1==null ){
-            $this->porcentaje1=1.5;
-            $this->porcentaje2=2;
-            $this->porcentaje3=2.5;
-            $this->porcentaje4=4;
-        }
-        if($this->rango1==null){
-            $this->rango1=30000000;
-            $this->rango2=70000000;
-            $this->rango3=20000000;
-        }
-        
-        
-        
-
-    }
+ /*
+            porcentaje1=1.5;
+            porcentaje2=2;
+            porcentaje3=2.5;
+            porcentaje4=4;
+            rango1=30000000;
+            rango2=70000000;
+            rango3=20000000;
+*/
 
 }
 
 $auto = new automovil;
 $impu = new calculador_impuestos;
-$auto -> mar = $_GET['Marca'];
-$auto -> line = $_GET['Linea'];
-$auto -> mod = $_GET['Modelo'];
-$impu -> val = $_GET['Valor'];
-$impu -> descuento = $_GET['descuento'];
+
+$id_auto = "SELECT MAX(id_auto) FROM automovil";
+
+$resultado = mysqli_query($conectar, $id_auto);
+while($consulta = mysqli_fetch_array($resultado))
+{
+    $max = $consulta['MAX(id_auto)'];
+}
+
+
+
+
+$id_re = "SELECT * FROM impuesto
+INNER JOIN automovil 
+ON impuesto.id_recibo = automoviL.id_recibo WHERE automovil.id_auto = '$max'";
+
+$resultado = mysqli_query($conectar, $id_re);
+
+while($consulta = mysqli_fetch_array($resultado))
+{
+$auto -> mar =  $consulta['marca'];
+$auto -> line = $consulta['linea'];
+$auto -> mod =  $consulta['modelo'];
+$impu -> val =  $consulta['valor'];
+$impu -> rango1 =  $consulta['rango_1'];
+$impu -> rango2 =  $consulta['rango_2'];
+$impu -> rango3 =  $consulta['rango_3'];
+$impu -> porcentaje1 =  $consulta['porcent_1'];
+$impu -> porcentaje2 =  $consulta['porcent_2'];
+$impu -> porcentaje3 =  $consulta['porcent_3'];
+$impu -> porcentaje4 =  $consulta['porcent_4'];
+}
+
+
+$id_desc = "SELECT MAX(id_descu) FROM descuentos";
+
+$resultado = mysqli_query($conectar, $id_desc);
+while($consulta = mysqli_fetch_array($resultado))
+{
+    $max_desc = $consulta['MAX(id_descu)'];
+}
+
+$i_de = "SELECT * FROM descuentos WHERE id_descu = '$max_desc'";
+
+$resultado = mysqli_query($conectar, $i_de);
+while($consulta = mysqli_fetch_array($resultado))
+{
+$impu -> d1 =  $consulta['descu_1'];
+$impu -> d2 =  $consulta['descu_2'];
+$impu -> d3 =  $consulta['descu_3'];
+}
+
+
 
 
 echo $auto -> mar . "<br>";
@@ -101,7 +138,6 @@ echo $auto -> line . "<br>";
 echo $auto -> mod . "<br>";
 echo $impu -> val . "<br>";
 
-$impu ->rango();
 $impu ->calcular();
 $impu ->aplicar_descuento();
 

@@ -14,7 +14,7 @@
 
     <section>
         <h3>Rangos:</h3>
-	    <form name="modificacion"  method="get" action="index.php">
+	    <form name="modificacion"  method="get" action="modimpu.php">
 		
         <p><label>Limite rango 1:</label>
 		
