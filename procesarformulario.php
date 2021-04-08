@@ -50,11 +50,11 @@ class calculador_impuestos{
                 $this->porc = 0;
                 $this->porc = $this->porc + ($this->resultado * 0.1);
             }
-            else if($this->$d2 == '50000'){
+            else if($this->d2 == '50000'){
                 $this->porc = 0;
                 $this->porc = $this->porc + 50000;
             }
-            else if($this->$d3 == '0.05'){
+            else if($this->d3 == '0.05'){
                 $this->porc = 0;
                 $this->porc = + $this->porc + ($this->resultado * 0.05);
             }

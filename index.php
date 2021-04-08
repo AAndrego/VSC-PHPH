@@ -11,14 +11,9 @@
 </head>
 
 <body>
-    <body bgcolor="#87C9A0">
-        <div id= "Contenidos">
-        <header>
-         <center><font face= "Brush Script MT"><FONT SIZE= "8" ><H1 style="color: #40604D;"> Calculo de impuestos</H1></FONT></font></center>
-        </header>
-    
-        <section id= "content">
-	
+
+        <section>
+        <center><font face= "Brush Script MT"><FONT SIZE= "8" ><H1 style="color: #40604D;"> Calculo de impuestos</H1></FONT></font></center>
         <center><font face= "Brush Script MT"> <font size="6"><h3>Datos del vehiculo:</h3></font></font></center> 
 	   <form name="cuestionario"  method="get" action="guardarimpu.php">
 		
@@ -35,7 +30,8 @@
         <center><input type="text" name="Valor"></p></center>
 
 		
-		<center><font face= "Brush Script MT"> <font size="6"><h3>Descuentos:</h3></font></font></center> 
+		<center><font face= "Brush Script MT"><font size="6"><h3>Descuentos:</h3></font></font></center> 
+		
 		
         <p>
         <label for="op1">
@@ -58,20 +54,19 @@
     <input type="hidden" name="po2" value="<?php echo "$p2" ?>"/>
     <input type="hidden" name="po3" value="<?php echo "$p3" ?>"/>
     <input type="hidden" name="po4" value="<?php echo "$p4" ?>"/>
-    <center><font face= "Century Gothic"><input type = "submit" value="Enviar"></FONT></center>
+        <input type = "submit" name="enviar" value="enviar">
       
 
         </form>
         <form name="rangos"  method="get" action="rangos.php">
-        <center><font face= "Century Gothic"><input type = "submit" value="Editar"></FONT></center>
+        <input type = "submit" name="editar" value="editar">
         </form>
     </section>
+
 	<footer>
-    <CENTER><H5>GUIA 3 Ingenieria de software II</H5></CENTER>
-    <CENTER><H5>ING. Fernando Sotelo</H5></CENTER>
-    <CENTER><h6>Xiomara Fernanda Jimenez Aya - Anderson Andres Gonzalez Hernandez - Jeisson Felipe Torres Huerfano</h6></CENTER>
+	
 	</footer>
-	</div>
+	
     
 	</body>
 	
