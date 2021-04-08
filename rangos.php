@@ -31,7 +31,7 @@
         </form>
         </form>
         <form name="volver"  method="get" action="index.php">
-        <CENTER><input type = "submit" name="volver" value="volver"></CENTER>
+        <CENTER><input type = "submit" name="Volver" value="Volver"></CENTER>
         </form>
     </section>
 
