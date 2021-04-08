@@ -177,7 +177,9 @@ $impu ->aplicar_descuento();
     </section>
 
 	<footer>
-	
+	<CENTER><H5>GUIA 3 Ingenieria de software II</H5></CENTER>
+    <CENTER><H5>ING. Fernando Sotelo</H5></CENTER>
+    <CENTER><h6>Xiomara Fernanda Jimenez Aya - Anderson Andres Gonzalez Hernandez - Jeisson Felipe Torres Huerfano</h6></CENTER>
 	</footer>
 	
     
