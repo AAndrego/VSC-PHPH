@@ -54,12 +54,12 @@
     <input type="hidden" name="po2" value="<?php echo "$p2" ?>"/>
     <input type="hidden" name="po3" value="<?php echo "$p3" ?>"/>
     <input type="hidden" name="po4" value="<?php echo "$p4" ?>"/>
-        <input type = "submit" name="enviar" value="enviar">
+    <center><input type = "submit" name="enviar" value="enviar"></center>
       
 
         </form>
         <form name="rangos"  method="get" action="rangos.php">
-        <input type = "submit" name="editar" value="editar">
+        <CENTER><input type = "submit" name="editar" value="editar"></CENTER>
         </form>
     </section>
 
