@@ -158,17 +158,19 @@ $impu ->aplicar_descuento();
 <body>
 
         <section>
-        <p><label>Marca :</label><label><?php echo $auto -> mar . "<br>" ?></label></p>
-        <p><label>Linea :</label><label><?php echo $auto -> line . "<br>" ?></label></p>
-        <p><label>Modelo :</label><label><?php echo $auto -> mod . "<br>" ?></label></p>
-		<p><label>Precio :</label><label><?php echo $impu -> val . "<br>" ?></label></p>
-        <p><label>Valor del impuesto :</label><label><?php echo" ". $impu ->calcular();  "<br>" ?></label></p>
-        <p><label>Total a pagar :</label><label><?php echo" ". $impu ->aplicar_descuento(); "<br>" ?></label></p>
+        <center><font face= "Brush Script MT"><FONT SIZE= "8" ><H1 style="color: #40604D;"> Datos</H1></FONT></font></center>
+
+       <center><font face= "Century Gothic"><p><label>Marca :</label><label><?php echo $auto -> mar . "<br>" ?></label></p></FONT></center> 
+       <center><font face= "Century Gothic"><p><label>Linea :</label><label><?php echo $auto -> line . "<br>" ?></label></p></FONT></center> 
+       <center><font face= "Century Gothic"><p><label>Modelo :</label><label><?php echo $auto -> mod . "<br>" ?></label></p></FONT></center> 
+       <center><font face= "Century Gothic"><p><label>Precio :</label><label><?php echo $impu -> val . "<br>" ?></label></p></FONT></center> 
+       <center><font face= "Century Gothic"><p><label>Valor del impuesto :</label><label><?php echo" ". $impu ->calcular();  "<br>" ?></label></p></FONT></center> 
+       <center><font face= "Century Gothic"><p><label>Total a pagar :</label><label><?php echo" ". $impu ->aplicar_descuento(); "<br>" ?></label></p></FONT></center> 
         
 
         </form>
         <form name="volver"  method="get" action="index.php">
-        <CENTER><input type = "submit" name="volver" value="volver"></CENTER>
+        <CENTER><input type = "submit" name="Volver" value="Volver"></CENTER>
         </form>
       
 
