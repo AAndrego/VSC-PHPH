@@ -29,7 +29,10 @@
         
 
         </form>
-        
+        </form>
+        <form name="volver"  method="get" action="index.php">
+        <CENTER><input type = "submit" name="volver" value="volver"></CENTER>
+        </form>
     </section>
 
 	<footer>

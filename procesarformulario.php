@@ -40,7 +40,7 @@ class calculador_impuestos{
             $this->porc = $this->porcentaje4 / 100;
         }
         $this->resultado =$this->val * $this->porc;
-        echo "Valor del impuesto" . $this->resultado . "<br>";
+        echo  $this->resultado . "<br>";
     }
     
     //Este metodo es para calcular el descuento y el valor a pagar del impuesto
@@ -61,7 +61,7 @@ class calculador_impuestos{
         
         $this->total = $this->resultado - $this->porc;
 
-        echo "El valor a pagar es: " . $this->total . "<br>";
+        echo  $this->total . "<br>";
     }
 
  /*
@@ -132,7 +132,7 @@ $impu -> d3 =  $consulta['descu_3'];
 
 
 
-
+/*
 echo $auto -> mar . "<br>";
 echo $auto -> line . "<br>";
 echo $auto -> mod . "<br>";
@@ -141,5 +141,44 @@ echo $impu -> val . "<br>";
 $impu ->calcular();
 $impu ->aplicar_descuento();
 
-
+*/
 ?>
+<!DOCTYPE html>
+
+<html lang= "es">
+
+<head>
+
+<meta charset="utf-8">
+
+<title>Resultado</title>
+
+</head>
+
+<body>
+
+        <section>
+        <p><label>Marca :</label><label><?php echo $auto -> mar . "<br>" ?></label></p>
+        <p><label>Linea :</label><label><?php echo $auto -> line . "<br>" ?></label></p>
+        <p><label>Modelo :</label><label><?php echo $auto -> mod . "<br>" ?></label></p>
+		<p><label>Precio :</label><label><?php echo $impu -> val . "<br>" ?></label></p>
+        <p><label>Valor del impuesto :</label><label><?php echo" ". $impu ->calcular();  "<br>" ?></label></p>
+        <p><label>Total a pagar :</label><label><?php echo" ". $impu ->aplicar_descuento(); "<br>" ?></label></p>
+        
+
+        </form>
+        <form name="volver"  method="get" action="index.php">
+        <CENTER><input type = "submit" name="volver" value="volver"></CENTER>
+        </form>
+      
+
+    </section>
+
+	<footer>
+	
+	</footer>
+	
+    
+	</body>
+	
+	</html>
