@@ -21,6 +21,16 @@ $insertar = "INSERT INTO automovil (id_recibo,marca,linea,modelo,valor)  VALUES 
 
 $query =  mysqli_query($conectar, $insertar);
 
+if($query){
+    echo "<script> alert('Guardado correctamente');
+    location.href = '../procesarformulario.php';
+    </script> ";
+}else{
+    echo "<script> alert('llene todos los datos');
+    location.href = '../index.php';
+    </script>";
+    
+}
 
 //-----------------------------------------------
 
@@ -45,14 +55,16 @@ $insertard = "INSERT INTO descuentos (descu_1,descu_2,descu_3)  VALUES ('$desc1'
 
 $query =  mysqli_query($conectar, $insertard);
 
-  if($query){
-        echo "<script> alert('Guardado correctamente');
-        location.href = '../procesarformulario.php';
-        </script> ";
-    }else{
-        echo "<script> alert('incorrecto'); </script>";
-    }
-
+if($query){
+    echo "<script> alert('Guardado correctamente');
+    location.href = '../procesarformulario.php';
+    </script> ";
+}else{
+    echo "<script> alert('Llene todos los datos');
+    location.href = '../index.php';
+    </script>";
+    
+}
 
 
 ?>

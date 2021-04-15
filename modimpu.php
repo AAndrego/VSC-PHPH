@@ -15,10 +15,12 @@ $query =  mysqli_query($conectar, $insertar);
 
 if($query){
     echo "<script> alert('Guardado correctamente');
-    location.href = '../procesarformulario.php';
+    location.href = '../index.php';
     </script> ";
 }else{
-    echo "<script> alert('incorrecto'); </script>";
+    echo "<script> alert('ingrese datos validos ');
+    location.href = '../rangos.php';
+    </script>";
 }
 
 ?>

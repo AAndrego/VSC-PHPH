@@ -64,15 +64,6 @@ class calculador_impuestos{
         echo  $this->total . "<br>";
     }
 
- /*
-            porcentaje1=1.5;
-            porcentaje2=2;
-            porcentaje3=2.5;
-            porcentaje4=4;
-            rango1=30000000;
-            rango2=70000000;
-            rango3=20000000;
-*/
 
 }
 
@@ -130,18 +121,6 @@ $impu -> d2 =  $consulta['descu_2'];
 $impu -> d3 =  $consulta['descu_3'];
 }
 
-
-
-/*
-echo $auto -> mar . "<br>";
-echo $auto -> line . "<br>";
-echo $auto -> mod . "<br>";
-echo $impu -> val . "<br>";
-
-$impu ->calcular();
-$impu ->aplicar_descuento();
-
-*/
 ?>
 <!DOCTYPE html>
 
