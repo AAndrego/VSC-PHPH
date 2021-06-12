@@ -13,7 +13,7 @@
 <body>
 
         <section>
-        <center><font face= "Brush Script MT"><FONT SIZE= "8" ><H1 style="color: red;"> Calculo de impuestos</H1></FONT></font></center>
+        <center><font face= "Brush Script MT"><FONT SIZE= "8" ><H1 style="color: blue;"> Calculo de impuestos</H1></FONT></font></center>
         <center><font face= "Brush Script MT"> <font size="6"><h3>Datos del vehiculo:</h3></font></font></center> 
 	   <form name="cuestionario"  method="get" action="guardarimpu.php">
 		
